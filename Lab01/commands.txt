@@ -1,0 +1,122 @@
+ls
+cd Lab01/
+docker pull dlambros/labs:lab1
+sudo !!
+ls
+docker images
+sudo !!
+sudo docker run -it dlambros/labs:lab1
+pwd
+cd /
+ls
+cd ~
+ls
+touch test.txt
+echo "This is a test" > test.txt
+rm test.txt
+echo "This is a test" > test.txt
+cp test.txt test_copy.txt
+echo "some_secret" > secret.txt
+chown root secret.txt
+sudo !!
+ls -al
+cd secrets
+;s
+ls
+cd ..
+chmod o-r secret.txt
+ll
+ls -al
+cd secrets
+ls
+cat top_secret_crapple_planst.txt
+echo "Top sneaky secrets in here" >> top_secret_crapple_plans.txt
+ls -al
+chmod og-r
+chmod og-r top_secret_crapple_plans.txt
+ls -al
+touch integrity_check.txt
+echo "Please don't modify this file" >> integrity_check.txt
+cat integrity_check.txt
+sha256sum integrity_check.txt
+echo "Modified the file anyway" > integrity_check.txt
+cat integrity_check.txt
+sha256sum integrity_check.txt
+htop
+ls
+mkdir dos_files
+cd dos_files/
+nano dos_attack.sh
+vim dos_attack.sh
+vi
+vi dos_attack.sh
+./dos_attack.sh
+chmod +x dos_attack.sh
+./dos_attack.sh
+./dos_attack.sh
+dos_attack.sh
+ls
+cat dos_attack.sh
+rm dos_attack.sh
+python
+vi dos_attack.sh
+chmod +x dos_attack.sh
+./dos_attack.sh
+ls
+rm file*
+htop
+./dos_attack.sh
+rm file*
+ls
+cd ..
+cd ..
+ls
+cd /home/sensitive_data/
+ls -al
+cd /home/shared_data/
+ls -al
+cd ..
+whoami
+groups
+cd shared_data/
+touch test.txt
+cd ..
+su user1
+cd user1
+ls
+ls -al
+cd ..
+ls
+cd user2
+ls -al
+cd ..
+ls
+cd student
+ls
+cat data.txt
+cat top_secret_crapple_plans.txt
+cat secret.txt
+cd secrets
+ls
+ls -al
+cat top_secret_crapple_plans.txt
+cd ..
+ls
+cd ..
+ls
+ls -al
+cd shared_data/
+ls
+ls -al
+sudo -l
+cd shared_data/
+touch suid_privesc.sh
+cd /
+ls
+cd root
+cd ~
+ls -al
+ls -al /bin
+cd /bin/busybox
+ls -al
+
