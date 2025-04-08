@@ -94,9 +94,11 @@ def plotFreqs(freqDict, letterFrequencies):
 
 # MAIN
 if __name__ == "__main__":
-    # Get user input
-    print("Enter the text you want to analyze: ")
-    text = input().lower().strip()
+    # Get text from file
+    with open("crapple_pay_code.txt") as code_file:
+        text = "".join(line for line in code_file)
+    text = text.lower()
+    print(text)
 
     # Perform frequency analysis
     freqDict, letterFrequencies = freqAnalysis(text, sort=True)
@@ -107,6 +109,3 @@ if __name__ == "__main__":
     plotFreqs(freqDict, letterFrequencies)
 
     # TODO: Crack the Caesar cipher in a brute-force manner
-
-    # Test text: 
-    #CENERENTOLA.- N bnxm yt ywd nk dtz hfs wjfi ymnx fsi fr rtxy fscntzx yt mjfw ymfy fsi, bmjs dtz wjyzws, fsi mtb qtsl dtzwjrfns, mjwj. It bwnyj f kjb qnsjx ifwqnsl, uqjfxj. N mfaj gjjs ajwd kfw kwtr mfuud xnshj dtz bjsy fbfd.
